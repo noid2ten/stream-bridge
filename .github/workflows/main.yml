@@ -30,3 +30,7 @@ jobs:
 
       - name: Run project
         run: node dist/index.mjs
+- name: Test stream endpoint
+  run: |
+    sleep 10
+    curl -v "http://127.0.0.1:3001/api/stream?url=https://kcnawatch.org/korea-central-tv-livestream/"
